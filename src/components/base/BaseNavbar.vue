@@ -1,8 +1,8 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4">
     <div class="container">
-      <a class="navbar-brand text-primary-alt" @click.prevent>
-        <strong>DAVID MAHBUBI</strong>
+      <a class="navbar-brand" @click.prevent>
+        <strong><span class="text-primary-alt">DAVID</span> MAHBUBI</strong>
       </a>
       <button
         class="navbar-toggler"
@@ -28,14 +28,14 @@
             </router-link>
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link" href="#">
+            <router-link class="nav-link" to="/projects">
               <strong>PROJECTS</strong>
-            </a>
+            </router-link>
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link" href="#">
+            <router-link class="nav-link" to="/contact">
               <strong>CONTACT</strong>
-            </a>
+            </router-link>
           </li>
         </ul>
       </div>

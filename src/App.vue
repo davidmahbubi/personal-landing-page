@@ -1,6 +1,6 @@
 <template>
   <BaseNavbar class="mb-5" />
-  <Transition>
+  <Transition mode="out">
     <router-view />
   </Transition>
 </template>

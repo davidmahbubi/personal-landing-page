@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="container">
-      <div class="profile-jumbotro row">
+      <div class="profile-jumbotro row mx-3">
         <div class="col text-start jumbotron-left-padding">
           <h3 class="text-primary-alt">
             <strong> Howdy ! {{ guestName || "Anonymous" }} </strong>
@@ -11,8 +11,7 @@
           </h1>
           <p>
             Are you looking for Fullstack Web Developer ? then You are in right
-            place ! Know more about me & my portfolios on my following social
-            medias below
+            place ! Know more about me & my portfolios on my social medias below
           </p>
           <ul class="socmed-list mt-4">
             <li class="mr-2">
@@ -53,8 +52,12 @@
             </li>
           </ul>
         </div>
-        <div class="col">
-          <img src="@/assets/images/me-jumbotron.jpg" alt="" />
+        <div class="col d-md-block d-none">
+          <img
+            src="@/assets/images/me-jumbotron.jpg"
+            alt=""
+            style="width: 100%; max-width: 400px"
+          />
         </div>
       </div>
     </div>
@@ -82,8 +85,10 @@ export default {
 </script>
 
 <style scoped>
-.jumbotron-left-padding {
-  padding: 140px 0;
+@media (min-width: 759px) {
+  .jumbotron-left-padding {
+    padding: 140px 0;
+  }
 }
 
 .rounded-btn {
