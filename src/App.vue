@@ -1,30 +1,40 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+  <BaseNavbar class="mb-5" />
+  <Transition>
+    <router-view />
+  </Transition>
 </template>
+
+<script>
+import BaseNavbar from "@/components/base/BaseNavbar.vue";
+
+export default {
+  components: {
+    BaseNavbar,
+  },
+};
+</script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
 }
 
-#nav {
-  padding: 30px;
+.text-primary-alt {
+  color: #ff4a57 !important;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.8s ease;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
 }
 </style>
