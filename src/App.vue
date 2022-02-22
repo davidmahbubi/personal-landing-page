@@ -3,14 +3,17 @@
   <Transition mode="out">
     <router-view />
   </Transition>
+  <BaseFooter />
 </template>
 
 <script>
 import BaseNavbar from "@/components/base/BaseNavbar.vue";
+import BaseFooter from "@/components/base/BaseFooter.vue";
 
 export default {
   components: {
     BaseNavbar,
+    BaseFooter,
   },
 };
 </script>
